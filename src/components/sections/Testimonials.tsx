@@ -6,7 +6,19 @@ import AnimatedSection from '@/components/AnimatedSection';
 import type { TestimonialsSection } from '@/types/site';
 import { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faStar } from '@fortawesome/free-solid-svg-icons';
+
+
+// Small helper to render a fixed 5‑star rating
+function Stars() {
+return (
+<div className="flex items-center gap-1 text-yellow-300" aria-label="5 out of 5 stars">
+{Array.from({ length: 5 }).map((_, i) => (
+<FontAwesomeIcon key={i} icon={faStar} className="w-4 h-4" aria-hidden="true" />
+))}
+</div>
+);
+}
 
 export function Testimonials({
   title = 'Our students love us.',
@@ -90,7 +102,7 @@ export function Testimonials({
                   transition={{ duration: 0.4, ease: 'easeOut', delay: i * 0.04 }}
                   className={`${
                     cardBase
-                  } ${radius} snap-center shrink-0 w-[86%]`}
+                  } ${radius} snap-center shrink-0 w-[86%] relative`}
                 >
                   {showQuoteIcon && <div className="text-2xl mb-3 opacity-70">“</div>}
                   <blockquote className="text-[1.05rem] leading-relaxed">{t.quote}</blockquote>
@@ -111,6 +123,7 @@ export function Testimonials({
                       {t.role && <div className="text-sm text-muted">{t.role}</div>}
                     </div>
                   </figcaption>
+                  <div className="absolute bottom-4 right-4"><Stars /></div>
                 </motion.figure>
               ))}
             </div>
@@ -147,7 +160,7 @@ export function Testimonials({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.05 }}
-              className={`${variant === 'ink' ? cardInk : cardBase} ${radius}`}
+              className={`relative ${variant === 'ink' ? cardInk : cardBase} ${radius}`}
             >
               {showQuoteIcon && <div className="text-2xl mb-3 opacity-70">“</div>}
 
@@ -179,6 +192,7 @@ export function Testimonials({
                   )}
                 </div>
               </figcaption>
+              <div className="absolute bottom-4 right-4"><Stars /></div>
             </motion.figure>
           ))}
         </div>
