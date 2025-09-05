@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 import { mockSiteConfig } from "@/mocks/lukeConfig"; 
 
 export const metadata: Metadata = {
-  title: "Amanda Grau",
-  description: "Board Certified Behavior Analyst in the Chicago suburbs. Website creator: Stricker Digital",
+  title: "Luke Stricker",
+  description: "Seasoned Professional Coach | Empowering Growth & Excellence",
 };
 
 async function getSiteConfig(): Promise<SiteConfig> {
