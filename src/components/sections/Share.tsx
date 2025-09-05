@@ -85,7 +85,7 @@ export default function Share({
           )}
         </header>
 
-        <div className="grid gap-6 sm:grid-cols-2 items-center">
+        <div className="grid gap-2 sm:grid-cols-2 items-center">
           <div className="card p-6 sm:p-8 text-center">
             {/* The QRCodeCanvas renders a <canvas>; capture it for download */}
             <div className="flex items-center justify-center">
@@ -102,7 +102,7 @@ export default function Share({
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-4">
             <div className="card p-6">
               {/* <h3 className="text-xl font-semibold">Quick actions</h3> */}
               <div className=" flex justify-center flex-wrap gap-3">
