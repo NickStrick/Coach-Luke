@@ -105,7 +105,7 @@ export default function Share({
           <div className="space-y-2">
             <div className="card p-6">
               {/* <h3 className="text-xl font-semibold">Quick actions</h3> */}
-              <div className="mt-4 flex justify-center flex-wrap gap-3">
+              <div className=" flex justify-center flex-wrap gap-3">
                 <button onClick={onCopy} className="btn btn-gradient">Copy Link</button>
                 <button onClick={onDownload} className="btn btn-inverted">Download PNG</button>
                 {showOpen && (
