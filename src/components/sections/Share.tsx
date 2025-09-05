@@ -105,9 +105,6 @@ export default function Share({
           <div className="space-y-4">
             <div className="card p-6">
               <h3 className="text-xl font-semibold">Quick actions</h3>
-              <p className="mt-2 text-sm opacity-80">
-                Use the buttons below to copy the link, or download the QR code image.
-              </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <button onClick={onCopy} className="btn btn-gradient">Copy Link</button>
                 <button onClick={onDownload} className="btn btn-inverted">Download PNG</button>
